@@ -32,6 +32,7 @@ const Form: React.FC<FormProps> = ({
             ? "opacity-30 cursor-not-allowed"
             : "cursor-pointer"
         }
+        aria-label="Submit"
       >
         <ArrowRightIcon />
       </button>

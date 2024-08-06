@@ -36,8 +36,13 @@ const ResultCard: React.FC<ResultCardProps> = ({ completion, isLoading }) => {
           data-tip="Copied to clipboard!"
         >
           <div className="card-actions">
-            <label className="swap swap-rotate">
-              <input type="checkbox" checked={isCopied} onChange={handleCopy} />
+            <label className="swap swap-rotate" htmlFor="clipboard-checkbox">
+              <input
+                id="clipboard-checkbox"
+                type="checkbox"
+                checked={isCopied}
+                onChange={handleCopy}
+              />
               <ClipboardIcon />
               <CheckCircleIcon />
             </label>

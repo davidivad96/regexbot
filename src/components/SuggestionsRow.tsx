@@ -16,7 +16,9 @@ const SuggestionsRow: React.FC<SuggestionsRowProps> = ({
         onClick={() => handleSuggestionClick(suggestion)}
       >
         <div className="card-body">
-          <p className="text-sm text-center text-white">{suggestion}</p>
+          <p className="text-sm text-center text-white font-semibold">
+            {suggestion}
+          </p>
           <div className="absolute top-2 right-2">
             <ArrowUpRight />
           </div>
