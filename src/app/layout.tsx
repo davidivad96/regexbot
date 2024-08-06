@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { PropsWithChildren } from "react";
@@ -22,6 +23,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => (
         {children}
         <Footer />
       </div>
+      <SpeedInsights />
     </body>
   </html>
 );
