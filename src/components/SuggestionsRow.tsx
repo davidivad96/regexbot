@@ -1,4 +1,5 @@
 import { SUGGESTIONS } from "@/constants";
+import ArrowUpRight from "./ArrowUpRightIcon";
 
 type SuggestionsRowProps = {
   handleSuggestionClick: (text: string) => Promise<void>;
@@ -16,6 +17,9 @@ const SuggestionsRow: React.FC<SuggestionsRowProps> = ({
       >
         <div className="card-body">
           <p className="text-sm text-center text-white">{suggestion}</p>
+          <div className="absolute top-2 right-2">
+            <ArrowUpRight />
+          </div>
         </div>
       </div>
     ))}
