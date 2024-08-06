@@ -1,6 +1,7 @@
 "use client";
 
 import { generateRegex } from "@/app/actions";
+import { createClient } from "@/utils/supabase";
 import { readStreamableValue } from "ai/rsc";
 import { FormEventHandler, useState } from "react";
 import Counter from "./Counter";
@@ -13,6 +14,8 @@ type ContentProps = {
 };
 
 const Content: React.FC<ContentProps> = ({ initialCount }) => {
+  const supabase = createClient();
+
   const [input, setInput] = useState<string>("");
   const [completion, setCompletion] = useState<string | undefined>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -27,6 +30,7 @@ const Content: React.FC<ContentProps> = ({ initialCount }) => {
     }
     setCompletion(newCompletion);
     setIsLoading(false);
+    supabase.rpc("increment_count");
   };
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
