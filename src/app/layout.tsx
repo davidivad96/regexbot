@@ -9,8 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "RegexBot: A Regex Builder powered by AI",
-  description:
-    "Convert natural language into regular expressions and vice versa",
+  description: "Convert natural language into regular expressions",
 };
 
 type RootLayoutProps = PropsWithChildren;
