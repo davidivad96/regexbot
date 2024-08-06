@@ -18,3 +18,14 @@ CREATE POLICY "Enable read access to all users" ON "public"."regex_generations" 
 
 CREATE POLICY "Enable update access to anon role (API)" ON "public"."regex_generations" AS permissive
   FOR UPDATE TO anon USING (true);
+
+-- Function to increment the count of "regex_generations"
+CREATE OR REPLACE FUNCTION increment_count()
+  RETURNS void
+  LANGUAGE sql
+  SET search_path = 'public'
+AS $$
+  UPDATE regex_generations
+  SET count = count + 1
+  WHERE id = 42;
+$$;

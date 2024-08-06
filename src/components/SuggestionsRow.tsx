@@ -2,7 +2,7 @@ import { SUGGESTIONS } from "@/utils/constants";
 import ArrowUpRight from "./ArrowUpRightIcon";
 
 type SuggestionsRowProps = {
-  handleSuggestionClick: (text: string) => void;
+  handleSuggestionClick: (text: string) => Promise<void>;
 };
 
 const SuggestionsRow: React.FC<SuggestionsRowProps> = ({

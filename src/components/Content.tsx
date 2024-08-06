@@ -30,17 +30,17 @@ const Content: React.FC<ContentProps> = ({ initialCount }) => {
     }
     setCompletion(newCompletion);
     setIsLoading(false);
-    supabase.rpc("increment_count");
+    await supabase.rpc("increment_count");
   };
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-    handleRegexGeneration(input);
+    await handleRegexGeneration(input);
   };
 
-  const handleSuggestionClick = (text: string) => {
+  const handleSuggestionClick = async (text: string) => {
     setInput(text);
-    handleRegexGeneration(text);
+    await handleRegexGeneration(text);
   };
 
   return (
