@@ -3,13 +3,16 @@
 import { generateRegex } from "@/app/actions";
 import { readStreamableValue } from "ai/rsc";
 import { FormEventHandler, useState } from "react";
+import Counter from "./Counter";
 import Form from "./Form";
 import ResultCard from "./ResultCard";
 import SuggestionsRow from "./SuggestionsRow";
 
-type ContentProps = {};
+type ContentProps = {
+  initialCount: number;
+};
 
-const Content: React.FC<ContentProps> = () => {
+const Content: React.FC<ContentProps> = ({ initialCount }) => {
   const [input, setInput] = useState<string>("");
   const [completion, setCompletion] = useState<string | undefined>();
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -46,6 +49,7 @@ const Content: React.FC<ContentProps> = () => {
       />
       <ResultCard completion={completion || ""} isLoading={isLoading} />
       <SuggestionsRow handleSuggestionClick={handleSuggestionClick} />
+      <Counter initialCount={initialCount} />
     </div>
   );
 };
