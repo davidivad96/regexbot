@@ -1,14 +1,15 @@
 import ArrowRightIcon from "@/components/ArrowRightIcon";
+import { SUGGESTIONS } from "@/constants";
 import { FormEventHandler } from "react";
 
-type MainFormProps = {
+type FormProps = {
   input: string;
   setInput: (input: string) => void;
   handleSubmit: FormEventHandler<HTMLFormElement>;
   isLoading: boolean;
 };
 
-const MainForm: React.FC<MainFormProps> = ({
+const Form: React.FC<FormProps> = ({
   input,
   setInput,
   handleSubmit,
@@ -19,7 +20,7 @@ const MainForm: React.FC<MainFormProps> = ({
       <input
         type="text"
         name="prompt"
-        placeholder="Match everything after the sequence 'https://'"
+        placeholder={SUGGESTIONS[0]}
         className="grow"
         onChange={(e) => setInput(e.target.value)}
         value={input}
@@ -38,4 +39,4 @@ const MainForm: React.FC<MainFormProps> = ({
   </form>
 );
 
-export default MainForm;
+export default Form;

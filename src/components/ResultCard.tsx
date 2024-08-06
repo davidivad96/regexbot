@@ -27,7 +27,7 @@ const ResultCard: React.FC<ResultCardProps> = ({ completion, isLoading }) => {
         {isLoading && <span className="loading loading-spinner loading-xs" />}
         <h1 className="card-title">{completion}</h1>
         <h2 className="opacity-60">
-          Make sure to check the outputs before using them
+          Make sure to check the output before using it
         </h2>
         <div
           className={`absolute right-2 bottom-2 ${
