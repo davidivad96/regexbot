@@ -4,14 +4,12 @@ Using AI to help you generate regular expressions using natural language.
 
 ## Description
 
-RegexBot is a web application that uses AI to help you generate, translate and test regular expressions.
-The app uses the Vercel AI SDK to generate regular expressions based on natural language input. It can also translate regular expressions to natural language and test them with sample text.
+RegexBot is a web application that uses AI to help you generate regular expressions using natural language.
+The app uses the Vercel AI SDK to generate regular expressions based on natural language input.
 
 ## Features
 
 - Generate regular expressions from natural language
-- Translate regular expressions to natural language
-- Test regular expressions with sample text
 
 ## Tech Stack
 
