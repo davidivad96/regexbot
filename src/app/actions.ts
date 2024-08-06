@@ -1,6 +1,6 @@
 "use server";
 
-import { SYSTEM_PROMPT } from "@/constants";
+import { SYSTEM_PROMPT } from "@/utils/constants";
 import { google } from "@ai-sdk/google";
 import { streamText } from "ai";
 import { createStreamableValue } from "ai/rsc";

@@ -1,5 +1,5 @@
 import ArrowRightIcon from "@/components/ArrowRightIcon";
-import { SUGGESTIONS } from "@/constants";
+import { SUGGESTIONS } from "@/utils/constants";
 import { FormEventHandler } from "react";
 
 type FormProps = {

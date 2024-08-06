@@ -1,4 +1,4 @@
-import { SUGGESTIONS } from "@/constants";
+import { SUGGESTIONS } from "@/utils/constants";
 import ArrowUpRight from "./ArrowUpRightIcon";
 
 type SuggestionsRowProps = {
