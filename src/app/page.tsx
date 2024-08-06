@@ -27,8 +27,17 @@ const Home: React.FC<HomeProps> = () => {
   };
 
   return (
-    <main className="flex flex-col min-h-screen justify-center items-center gap-4 p-12">
-      <div className="flex flex-col w-full max-w-3xl gap-4">
+    <main className="flex flex-col min-h-screen justify-evenly items-center gap-4 p-12">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-4xl font-bold text-center">
+          Convert <span className="text-primary">Plain English</span> into{" "}
+          <span className="text-primary">Powerful RegEx</span> Effortlessly
+        </h1>
+        <p className="text-lg text-center">
+          Unlock the Power of AI to Master Regular Expressions
+        </p>
+      </div>
+      <div className="flex flex-col w-full max-w-6xl gap-4">
         <MainForm
           input={input}
           setInput={setInput}
