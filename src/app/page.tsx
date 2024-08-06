@@ -15,12 +15,14 @@ const Home: React.FC<HomeProps> = () => {
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-    if (!input) return;
+    if (!input || isLoading) return;
     setIsLoading(true);
     const result = await generateRegex(input);
+    let newCompletion = "";
     for await (const content of readStreamableValue(result)) {
-      setCompletion(content);
+      newCompletion = content || newCompletion;
     }
+    setCompletion(newCompletion);
     setIsLoading(false);
   };
 
@@ -31,6 +33,7 @@ const Home: React.FC<HomeProps> = () => {
           input={input}
           setInput={setInput}
           handleSubmit={handleSubmit}
+          isLoading={isLoading}
         />
         <ResultCard completion={completion ?? ""} isLoading={isLoading} />
       </div>
