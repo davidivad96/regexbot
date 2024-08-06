@@ -7,7 +7,7 @@ type SuggestionsRowProps = {
 const SuggestionsRow: React.FC<SuggestionsRowProps> = ({
   handleSuggestionClick,
 }) => (
-  <div className="flex flex-row justify-between items-center gap-4">
+  <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
     {SUGGESTIONS.map((suggestion) => (
       <div
         key={suggestion}
