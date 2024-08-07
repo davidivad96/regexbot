@@ -1,5 +1,5 @@
 import Content from "@/components/Content";
-import HeroSection from "@/components/HeroSection";
+import Headline from "@/components/Headline";
 import { createClient } from "@/utils/supabase";
 
 type HomeProps = {};
@@ -15,7 +15,7 @@ const Home: React.FC<HomeProps> = async () => {
 
   return (
     <main className="flex flex-col flex-1 justify-around items-center gap-4 p-12">
-      <HeroSection />
+      <Headline />
       <Content initialCount={data?.count ?? 0} />
     </main>
   );
