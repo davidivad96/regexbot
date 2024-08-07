@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = () => (
     </div>
     <a href="https://regexr.com" target="_blank" rel="noreferrer">
       <button className="btn btn-link">
-        Go to RegExr
+        Test your regex on Regexr.com
         <ArrowTopRightOnSquare />
       </button>
     </a>
