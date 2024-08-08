@@ -1,6 +1,6 @@
 import Content from "@/components/Content";
 import Headline from "@/components/Headline";
-import { createClient } from "@/utils/supabase";
+import { createClient } from "@/utils/supabase/server";
 
 type HomeProps = {};
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { generateRegex } from "@/app/actions";
-import { createClient } from "@/utils/supabase";
+import { createClient } from "@/utils/supabase/client";
 import { readStreamableValue } from "ai/rsc";
 import { FormEventHandler, useState } from "react";
 import Counter from "./Counter";

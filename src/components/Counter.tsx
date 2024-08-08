@@ -1,4 +1,4 @@
-import { createClient } from "@/utils/supabase";
+import { createClient } from "@/utils/supabase/client";
 import { useState } from "react";
 import { AnimatedCounter } from "react-animated-counter";
 
