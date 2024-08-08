@@ -3,7 +3,7 @@ type HeadlineProps = {};
 const Headline: React.FC<HeadlineProps> = () => (
   <div className="flex flex-col gap-4">
     <h1 className="text-5xl font-bold text-center leading-snug">
-      Convert <span className="text-primary">Plain English</span> into{" "}
+      Convert <span className="text-primary">natural language</span> into{" "}
       <span className="text-primary">Powerful RegEx</span> Effortlessly
     </h1>
     <p className="text-xl text-center">
