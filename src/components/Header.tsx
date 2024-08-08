@@ -4,7 +4,7 @@ import ArrowTopRightOnSquare from "./ArrowTopRightOnSquareIcon";
 type HeaderProps = {};
 
 const Header: React.FC<HeaderProps> = () => (
-  <div className="sticky top-0 w-full flex flex-row justify-between items-center p-4 bg-base-100 z-10 border-b-[1px] border-b-slate-800">
+  <header className="sticky top-0 w-full flex flex-row justify-between items-center p-4 bg-base-100 z-10 border-b-[1px] border-b-slate-800">
     <div className="flex items-center gap-2">
       <Image
         src="/regexbot-logo.png"
@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = () => (
         <ArrowTopRightOnSquare />
       </button>
     </a>
-  </div>
+  </header>
 );
 
 export default Header;
