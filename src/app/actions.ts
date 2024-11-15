@@ -7,7 +7,7 @@ import { createStreamableValue } from "ai/rsc";
 
 export const generateRegex = async (prompt: string) => {
   const { textStream } = await streamText({
-    model: google("models/gemini-1.5-pro-latest"),
+    model: google("models/gemini-1.5-flash-latest"),
     prompt,
     system: SYSTEM_PROMPT,
   });
