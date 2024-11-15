@@ -1,13 +1,13 @@
 "use server";
 
 import { SYSTEM_PROMPT } from "@/utils/constants";
-import { google } from "@ai-sdk/google";
+import { openai } from "@ai-sdk/openai";
 import { streamText } from "ai";
 import { createStreamableValue } from "ai/rsc";
 
 export const generateRegex = async (prompt: string) => {
   const { textStream } = await streamText({
-    model: google("models/gemini-1.5-flash-latest"),
+    model: openai("gpt-4o-mini"),
     prompt,
     system: SYSTEM_PROMPT,
   });
