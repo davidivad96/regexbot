@@ -26,9 +26,8 @@ const Content: React.FC<ContentProps> = ({ initialCount }) => {
     const result = await generateRegex(value);
     let newCompletion = "";
     for await (const content of readStreamableValue(result)) {
-      newCompletion = content || newCompletion;
+      setCompletion(content || newCompletion);
     }
-    setCompletion(newCompletion);
     setIsLoading(false);
     await supabase.rpc("increment_count");
   };
