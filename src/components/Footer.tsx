@@ -5,11 +5,19 @@ const Footer: React.FC<FooterProps> = () => (
     <a href="https://x.com/dfodev" target="_blank">
       <h2 className="text-sm font-semibold text-white">Built by @dfodev:</h2>
     </a>
-    <a href="https://www.getretouchai.app/" target="_blank">
-      <h2 className="text-sm font-semibold text-white link link-hover">
-        RetouchAI
-      </h2>
-    </a>
+    <div className="flex flex-row justify-center items-center gap-2 mt-2">
+      <a href="https://www.getretouchai.app/" target="_blank">
+        <h2 className="text-sm font-semibold text-white link link-hover">
+          RetouchAI
+        </h2>
+      </a>
+      <div className="h-1 w-1 bg-white rounded-full" />
+      <a href="https://www.wordly.es/" target="_blank">
+        <h2 className="text-sm font-semibold text-white link link-hover">
+          Wordly
+        </h2>
+      </a>
+    </div>
   </footer>
 );
 
