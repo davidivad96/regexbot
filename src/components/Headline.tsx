@@ -6,9 +6,9 @@ const Headline: React.FC<HeadlineProps> = () => (
       Convert <span className="text-primary">natural language</span> into{" "}
       <span className="text-primary">Powerful RegEx</span> Effortlessly
     </h1>
-    <p className="text-xl text-center">
+    <span className="text-xl text-center">
       Unlock the Power of AI to Master Regular Expressions
-    </p>
+    </span>
   </div>
 );
 

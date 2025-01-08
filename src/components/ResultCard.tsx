@@ -25,13 +25,14 @@ const ResultCard: React.FC<ResultCardProps> = ({ completion, isLoading }) => {
     >
       <div className="card-body justify-center items-center text-center">
         {isLoading && <span className="loading loading-spinner loading-xs" />}
-        <h1 className="card-title max-w-full line-clamp-3">{completion}</h1>
-        <h2 className="opacity-60">
+        <span className="card-title max-w-full line-clamp-3">{completion}</span>
+        <span className="opacity-60">
           Make sure to check the output before using it
-        </h2>
+        </span>
         <div
-          className={`absolute right-2 bottom-2 ${isCopied ? "tooltip tooltip-open tooltip-primary" : ""
-            }`}
+          className={`absolute right-2 bottom-2 ${
+            isCopied ? "tooltip tooltip-open tooltip-primary" : ""
+          }`}
           data-tip="Copied to clipboard!"
         >
           <div className="card-actions">

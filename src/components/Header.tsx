@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = () => (
         width={50}
         height={50}
       />
-      <h1 className="text-2xl font-semibold text-white">RegexBot</h1>
+      <span className="text-2xl font-semibold text-white">RegexBot</span>
     </div>
     <a href="https://regexr.com" target="_blank" rel="noreferrer">
       <button className="btn btn-link">
