@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Head from "next/head";
+import Script from "next/script";
 import { PropsWithChildren } from "react";
 import "./globals.css";
 
@@ -26,29 +26,32 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  alternates: {
+    canonical: "https://regexbot.xyz",
+    languages: {
+      "en-US": "https://regexbot.xyz",
+    },
+  },
 };
 
 type RootLayoutProps = PropsWithChildren;
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => (
   <html lang="en" data-theme="night">
-    <Head>
-      <link rel="canonical" href="https://regexbot.xyz" key="canonical" />
-      <link rel="alternate" href="https://regexbot.xyz" hrefLang="en-US" />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            url: "https://regexbot.xyz",
-            name: siteName,
-            description,
-          }),
-        }}
-        key="jsonld"
-      />
-    </Head>
+    <Script
+      id="jsonld"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          url: "https://regexbot.xyz",
+          name: siteName,
+          description,
+        }),
+      }}
+      key="jsonld"
+    />
     <body className={inter.className}>
       <div className="flex flex-col flex-1 min-h-screen">
         <Header />
