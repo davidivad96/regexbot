@@ -18,6 +18,13 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
+  keywords: [
+    "regex",
+    "regex builder",
+    "regex generator",
+    "regex tool",
+    "regex ai",
+  ],
   openGraph: {
     title,
     description,
