@@ -44,7 +44,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => (
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Product",
+          "@type": "WebSite",
           url: "https://regexbot.xyz",
           name: siteName,
           description,
